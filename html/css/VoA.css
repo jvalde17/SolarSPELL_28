@@ -1,0 +1,25 @@
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+
+#sect {
+    width: 87%; 
+    margin-right: 10px; 
+    float: right; 
+    background-color: white
+}
+
+#sepLine {
+    width:100%; 
+    padding: 20px; 
+    border-top: 1px solid #dfdfdf;
+}
+
+h1 {
+    color:DodgerBlue; 
+    width 100%; 
+    padding: 10px 10px 10px 30px; 
+    font-size:5vw;
+}
