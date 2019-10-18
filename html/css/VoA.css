@@ -4,6 +4,33 @@ html {
     -webkit-text-size-adjust: 100%;
   }
 
+h1 {
+    color:#41ACE9; 
+    width 100%; 
+    padding: 10px 10px 10px 30px; 
+    font-size:5vw;
+}
+
+p {
+    width 100%; 
+    padding: 10px 10px 10px 30px; 
+    font-size:2.5vw;
+}
+
+ul {
+    list-style-type:square;
+}
+li {
+    width 100%; 
+    padding: 10px 0px 0px 30px; 
+    font-size:2vw;
+}
+
+a {
+    font-size:1.5vw; 
+    padding-left: 10px
+}
+
 #sect {
     width: 87%; 
     margin-right: 10px; 
@@ -11,15 +38,33 @@ html {
     background-color: white
 }
 
-#sepLine {
+#sepDiv {
     width:100%; 
     padding: 20px; 
     border-top: 1px solid #dfdfdf;
 }
 
-h1 {
-    color:DodgerBlue; 
+#lessonMenu {
+    display: block; 
+    background-color: 41ACE9; 
+    position:fixed; 
+    min-width: 13%; 
+    -webkit-backface-visibility: hidden; 
+    backface-visibility:hidden;
+}
+
+#lessonP {
+    padding: 10px; 
+    color:white; 
+    font-size:2vw;
+}
+
+#keyPoint {
     width 100%; 
-    padding: 10px 10px 10px 30px; 
-    font-size:5vw;
+    padding: 0px 0px 0px 60px; 
+    font-size:1.5vw;
+}
+
+#clearAll {
+    clear:both
 }
