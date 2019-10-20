@@ -1,9 +1,3 @@
-html {
-    font-family: sans-serif;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-  }
-
 h1 {
     color:#41ACE9; 
     width 100%; 
@@ -46,7 +40,7 @@ a {
 
 #lessonMenu {
     display: block; 
-    background-color: 41ACE9; 
+    background-color: #41ACE9; 
     position:fixed; 
     min-width: 13%; 
     -webkit-backface-visibility: hidden; 
@@ -62,7 +56,7 @@ a {
 #keyPoint {
     width 100%; 
     padding: 0px 0px 0px 60px; 
-    font-size:1.5vw;
+    font-size: 1.5vw;
 }
 
 #clearAll {
