@@ -56,10 +56,22 @@
     backface-visibility:hidden;
 }
 
+.keyPts {
+    width 100%; 
+    padding: 0px 0px 0px 60px; 
+    font-size:1.5vw;">
+}
+
 .lessonP {
     padding: 10px; 
-    color:white; 
+    color: white;
     font-size:2vw;
+}
+
+.lessonA {
+    font-size:1.5vw; 
+    padding-left: 10px; 
+    color: white;
 }
 
 #clearAll {
