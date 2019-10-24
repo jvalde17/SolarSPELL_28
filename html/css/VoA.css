@@ -48,12 +48,15 @@
 }
 
 #lessonMenu {
-    display: block; 
-    background-color: #41ACE9; 
     position:fixed; 
     min-width: 13%; 
     -webkit-backface-visibility: hidden; 
     backface-visibility:hidden;
+    border-radius: 25px;
+    order: 2px solid #41ACE9;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
 }
 
 .keyPts {
@@ -76,4 +79,31 @@
 
 #clearAll {
     clear:both
+}
+
+@media only screen and (max-width: 64em) {
+    #sect {
+        display: block; 
+        min-width: 0; 
+        width: auto; 
+    }
+
+	#lessonMenu {
+        min-width: 0; 
+		width: auto; 
+    }
+}
+
+@media only screen and (max-width: 37.5em) {
+    #sect {
+        display: block; 
+        min-width: 0; 
+        width: auto; 
+    }
+
+	#lessonMenu {
+        min-width: 0; 
+		width: auto; 
+    }
+	
 }
