@@ -47,7 +47,7 @@
     border-top: 1px solid #dfdfdf;
 }
 
-#lessonMenu {
+lesson {
     display: block; 
     background-color: #41ACE9; 
     position:fixed; 
@@ -57,21 +57,37 @@
     padding: 10px;
 }
 
+lesson p {
+    padding: 10px; 
+    font-size:2vw;
+    color: white;
+}
+
+lesson a {
+    font-size:1.5vw; 
+    padding-left: 10px; 
+    color: white;
+}
+
+lesson a:link { 
+    color: white; 
+}
+
+lesson a:visited { 
+    color: black; 
+}
+
+lesson a:hover { 
+    color: #FED770;
+ }
+
 .keyPts {
     width 100%; 
     padding: 0px 0px 0px 60px; 
     font-size:1.5vw;
 }
 
-.lessonP {
-    padding: 10px; 
-    font-size:2vw;
-}
 
-.lessonA {
-    font-size:1.5vw; 
-    padding-left: 10px; 
-}
 
 #clearAll {
     clear:both
@@ -79,14 +95,15 @@
 
 @media only screen and (max-width: 64em) and (max-width: 37.5em){
     #sect {
-        display: block; 
-        min-width: 0; 
-        width: auto; 
+        float: none; 
+		width: auto; 
+		padding: 0.5em;
     }
 
 	#lessonMenu {
-        min-width: 0; 
-        width: auto; 
-        position: static; 
+        float: none; 
+		width: auto; 
+		text-align: center; 
+		padding: 0.5em; 
     }
 }
