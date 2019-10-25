@@ -1,0 +1,109 @@
+.VOAh1 {
+    color:#41ACE9; 
+    width 100%; 
+    padding: 10px 10px 10px 30px; 
+    font-size:5vw;
+}
+
+.VOAp {
+    width 100%; 
+    padding: 10px 10px 10px 30px; 
+    font-size:2.5vw;
+}
+
+
+.VOAsmaller {
+    width 100%; 
+    padding: 0px 0px 0px 60px;
+    font-size:1.5vw;
+}
+
+
+.VOAul {
+    list-style-type:square;
+}
+.VOAli {
+    width 100%; 
+    padding: 10px 0px 0px 30px; 
+    font-size:2vw;
+}
+
+.VOAa {
+    font-size:1.5vw; 
+    padding-left: 10px
+}
+
+#sect {
+    width: 87%; 
+    margin-right: 10px; 
+    float: right; 
+    background-color: white
+    padding: 60px 10px 10px 10px;
+}
+
+#sepDiv {
+    width:100%; 
+    padding: 20px; 
+    border-top: 1px solid #dfdfdf;
+}
+
+lesson {
+    display: block; 
+    background-color: #41ACE9; 
+    position:fixed; 
+    min-width: 13%; 
+    -webkit-backface-visibility: hidden; 
+    backface-visibility:hidden; 
+    padding: 10px;
+}
+
+lesson p {
+    padding: 10px; 
+    font-size:2vw;
+    color: white;
+}
+
+lesson a {
+    font-size:1.5vw; 
+    padding-left: 10px; 
+    color: white;
+}
+
+lesson a:link { 
+    color: white; 
+}
+
+lesson a:visited { 
+    color: black; 
+}
+
+lesson a:hover { 
+    color: #FED770;
+ }
+
+.keyPts {
+    width 100%; 
+    padding: 0px 0px 0px 60px; 
+    font-size:2vw;
+}
+
+
+
+#clearAll {
+    clear:both
+}
+
+@media only screen and (max-width: 64em) and (max-width: 37.5em){
+    #sect {
+        float: none; 
+		width: auto; 
+		padding: 0.5em;
+    }
+
+	#lessonMenu {
+        float: none; 
+		width: auto; 
+		text-align: center; 
+		padding: 0.5em; 
+    }
+}
