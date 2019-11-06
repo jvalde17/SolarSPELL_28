@@ -1,34 +1,40 @@
-h1 {
+.VOAh1 {
     color:#41ACE9; 
     width 100%; 
     padding: 10px 10px 10px 30px; 
     font-size:5vw;
 }
 
-p {
+.VOAp {
     width 100%; 
     padding: 10px 10px 10px 30px; 
     font-size:2.5vw;
 }
 
+.VOAbigger {
+    width 100%; 
+    padding: 10px 10px 10px 30px; 
+    font-size:2vw;
+}
 
-.smaller {
+
+.VOAsmaller {
     width 100%; 
     padding: 0px 0px 0px 60px;
     font-size:1.5vw;
 }
 
 
-ul {
+.VOAul {
     list-style-type:square;
 }
-li {
+.VOAli {
     width 100%; 
     padding: 10px 0px 0px 30px; 
     font-size:2vw;
 }
 
-a {
+.VOAa {
     font-size:1.5vw; 
     padding-left: 10px
 }
@@ -38,6 +44,7 @@ a {
     margin-right: 10px; 
     float: right; 
     background-color: white
+    padding: 60px 10px 10px 10px;
 }
 
 #sepDiv {
@@ -46,27 +53,90 @@ a {
     border-top: 1px solid #dfdfdf;
 }
 
-#lessonMenu {
+lesson {
     display: block; 
     background-color: #41ACE9; 
     position:fixed; 
     min-width: 13%; 
     -webkit-backface-visibility: hidden; 
-    backface-visibility:hidden;
+    backface-visibility:hidden; 
+    padding: 10px;
 }
 
-#lessonP {
+lesson p {
     padding: 10px; 
-    color:white; 
     font-size:2vw;
+    color: white;
 }
 
-#keyPoint {
+lesson a {
+    font-size:1.5vw; 
+    padding-left: 10px; 
+    color: white;
+}
+
+lesson a:link { 
+    color: white; 
+}
+
+lesson a:visited { 
+    color: black; 
+}
+
+lesson a:hover { 
+    color: #FED770;
+ }
+
+.keyPts {
     width 100%; 
     padding: 0px 0px 0px 60px; 
-    font-size: 1.5vw;
+    font-size:2vw;
 }
 
 #clearAll {
     clear:both
+}
+
+.VoAButton {
+	box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+	background:linear-gradient(to bottom, #79bbff 5%, #41ACE9 100%);
+	background-color:#41ACE9;
+	border-radius:6px;
+	border:1px solid #84bbf3;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+    text-shadow:0px 1px 0px #528ecc;
+    width: 150px;
+    text-align: center;
+}
+.VoAButton:hover {
+	background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+	background-color:#378de5;
+}
+.VoAButton:active {
+	position:relative;
+	top:1px;
+}
+
+        
+
+@media only screen and (max-width: 64em) and (max-width: 37.5em){
+    #sect {
+        float: none; 
+		width: auto; 
+		padding: 0.5em;
+    }
+
+	#lessonMenu {
+        float: none; 
+		width: auto; 
+		text-align: center; 
+		padding: 0.5em; 
+    }
 }
