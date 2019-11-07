@@ -7,7 +7,8 @@ Team Members:
 Curtis Smith,
 Jess Valdez,
 Catherine Khongsaly,
-Christopher Risser
+Christopher Risser,
+Tony Conrad
 
 Development branch created 10-10-2019
  
