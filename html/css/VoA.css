@@ -58,9 +58,11 @@ lesson {
     background-color: #41ACE9; 
     position:fixed; 
     min-width: 13%; 
+    height: 100%;
     -webkit-backface-visibility: hidden; 
     backface-visibility:hidden; 
     padding: 10px;
+    overflow: scroll;
 }
 
 lesson p {
