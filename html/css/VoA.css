@@ -132,6 +132,7 @@ lesson a:hover {
 
 @media only screen and (max-width: 64em) and (max-width: 37.5em){
     #sect {
+        padding-top: 10px;
         float: none; 
 		width: auto; 
 		padding: 0.5em;
