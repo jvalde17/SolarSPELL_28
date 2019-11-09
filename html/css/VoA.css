@@ -58,9 +58,11 @@ lesson {
     background-color: #41ACE9; 
     position:fixed; 
     min-width: 13%; 
+    height: 100%;
     -webkit-backface-visibility: hidden; 
     backface-visibility:hidden; 
     padding: 10px;
+    overflow: scroll;
 }
 
 lesson p {
@@ -71,6 +73,8 @@ lesson p {
 
 lesson a {
     font-size:1.5vw; 
+    padding-top: 0px;
+    padding-bottom: 0px;
     padding-left: 10px; 
     color: white;
 }
@@ -128,6 +132,7 @@ lesson a:hover {
 
 @media only screen and (max-width: 64em) and (max-width: 37.5em){
     #sect {
+        padding-top: 10px;
         float: none; 
 		width: auto; 
 		padding: 0.5em;
