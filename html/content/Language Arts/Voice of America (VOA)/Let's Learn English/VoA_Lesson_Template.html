@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-            <title>VoA Lesson 1</title>
+            <title>VoA Lesson ##</title>
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes"/>
             <!--[if lt IE 9]>
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"> </script>   
             <![endif]-->
-            <meta name="Lesson 1 VoA" content="Lesson 1 VoA Learning English" />
+            <meta name="Lesson ## VoA" content="Lesson ## VoA Learning English" />
 
             <!-- Bootstrap core CSS -->
             <link href="/css/bootstrap.css" rel="stylesheet">
@@ -209,27 +209,59 @@
     <div id = "sect">
         <div id = "sepDiv">
         <h1 class = "VOAh1">
-            [Lesson # Title]
+            Lesson ##: ##Title##
         </h1>
     </div>
 
     <div id = "sepDiv">
-        <P class = "VOAp">[Summary Content]</P>
-        
+        <P class = "VOAp">
+            <strong>Objectives</strong>
+        </p>
+        <ul class = "VOAul">
+            <p class = "VOAobjective">##.</p> <!--Template for objective style 1-->
+            <p class = "VOAobjective">Students learn to use the strategy, <em>##</em>, ##.</p> <!--Template for objective style 2-->
+        </ul>
+    </div>
+
+    <!--Remove this div if no summary content-->
+    <div id = "sumDiv">
+        <p class = "VOAp">Summary</p> 
+        <P class = "VOAsmaller">[Summary Content]</P>    
+    </div>
+
+    <div id = "sepDiv">
         <P class = "VOAp">
             <strong>Review</strong> the following videos:
         </p>
         
-            <video width="560" height="315" controls>
-                <source src="#" type="video/mp4">
+        <div class="VOAvideo">
+            <video class = "VOAvidwrapper" controls>
+                <source src="##" type="video/mp4">
                     Your browser does not support the video tag.
             </video>
+        </div>
 
-        
+        <p class = "VOAp">Speaking Practice</p>
+        <div class="VOAvideo">
+            <video class = "VOAvidwrapper" controls>
+                <source src="##" type="video/mp4">
+                    Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <p class = "VOAp">Pronunciation Practice</p>
+        <div class="VOAvideo">
+            <video class = "VOAvidwrapper" controls>
+                <source src="##" type="video/mp4">
+                    Your browser does not support the video tag.
+            </video>
+        </div>
+
     </div>
 
     <div id = "sepDiv">
-            <P class = "VOAp">[Summary Content]</P>
+            <P class = "VOAp">Conversation</p>
+                <P class = "VOAsmaller"><strong>##Name##: </strong>##Text##</P>
             
             <P class = "VOAp">
                 <strong>Review</strong> the following audio:
@@ -237,23 +269,23 @@
             
             <P class = "VOAp">
                     <audio controls>
-                            <source src="#.mp3" type="audio/mpeg">
+                            <source src="##.mp3" type="audio/mpeg">
                             Your browser does not support the audio element.
                     </audio>
             </p>
             
         </div>
 
-
+ 
     <div id = "sepDiv">
         <P class = "VOAp">
             <strong>Review</strong> the following resources:
         </p>
         <ul class = "VOAul">
-            <li class = "VOAli"><a href="#">[Title of Resource]</a></li>
-            <li class = "VOAli"><a href="#">[Title of Resource]</a></li>
-            <li class = "VOAli"><a href="#">[Title of Resource]</a></li>
-            <li class = "VOAli"><a href="#">[Title of Resource]</a></li>
+            <li class = "VOAli"><a href="##">##Title of Resource##</a></li>
+            <li class = "VOAli"><a href="##">##Title of Resource##</a></li>
+            <li class = "VOAli"><a href="##">##Title of Resource##</a></li>
+            <li class = "VOAli"><a href="##">##Title of Resource##</a></li>
         </ul>
     </div>
 
@@ -261,17 +293,17 @@
         <P class = "VOAp">
             Key Words
         </p>
-        <P id = "keyPts"><strong>Defn</strong> [description]</p>
-        <P id = "keyPts"><strong>Defn</strong> [description]</p>
+        <P class = "VOAsmaller" id = "keyPts"><strong>##word##</strong>&nbsp;-<em>&nbsp;##part of speech##.</em>&nbsp;##definition##.&nbsp;</p>
     </div>
 
     <div id = "sepDiv">
-        <P class = "VOAp">[content]</p>
+        <P class = "VOAp">Learning Strategy</p>
+            <P class = "VOAsmaller"><strong>##content##</p>
     </div>
 
     <div id = "sepDiv">
-        <a href= "#" class = "VoAButton" title="Previous">Previous</a>
-        <a href= "#" class = "VoAButton" title="Next">Next</a>
+        <a href= "##" class = "VoAButton" title="Previous">Previous</a>
+        <a href= "##" class = "VoAButton" title="Next">Next</a>
     </div>   
         </div>
         <lesson>
