@@ -1,35 +1,51 @@
 .VOAh1 {
     color:#41ACE9; 
-    width 100%; 
+    width: 100%; 
     padding: 10px 10px 10px 30px; 
     font-size:5vw;
 }
 
 .VOAp {
-    width 100%; 
+    width: 100%; 
     padding: 10px 10px 10px 30px; 
     font-size:2.5vw;
 }
 
 .VOAbigger {
-    width 100%; 
+    width: 100%; 
     padding: 10px 10px 10px 30px; 
     font-size:2vw;
 }
 
 
 .VOAsmaller {
-    width 100%; 
+    width: 100%; 
     padding: 0px 0px 0px 60px;
     font-size:1.5vw;
 }
 
+.VOAobjective {
+    width: 100%; 
+    padding: 0px 0px 0px 30px;
+    font-size:1.5vw;
+}
+
+.VOAvideo {
+    position: relative;
+    padding-left: 30px;
+    height: auto;
+}
+
+.VOAvidwrapper {
+    width: 80%;
+    height: 80%;
+}
 
 .VOAul {
     list-style-type:square;
 }
 .VOAli {
-    width 100%; 
+    width: 100%; 
     padding: 10px 0px 0px 30px; 
     font-size:2vw;
 }
@@ -57,16 +73,13 @@ lesson {
     display: block; 
     background-color: #41ACE9; 
     position:fixed; 
-    min-width: 13%; 
     height: 100%;
     -webkit-backface-visibility: hidden; 
     backface-visibility:hidden; 
-    padding: 10px;
     overflow: scroll;
 }
 
 lesson p {
-    padding: 10px; 
     font-size:2vw;
     color: white;
 }
@@ -92,7 +105,7 @@ lesson a:hover {
  }
 
 .keyPts {
-    width 100%; 
+    width: 100%; 
     padding: 0px 0px 0px 60px; 
     font-size:2vw;
 }
@@ -102,30 +115,30 @@ lesson a:hover {
 }
 
 .VoAButton {
-	box-shadow:inset 0px 1px 0px 0px #bbdaf7;
-	background:linear-gradient(to bottom, #79bbff 5%, #41ACE9 100%);
-	background-color:#41ACE9;
-	border-radius:6px;
-	border:1px solid #84bbf3;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
+    box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+    background:linear-gradient(to bottom, #79bbff 5%, #41ACE9 100%);
+    background-color:#41ACE9;
+    border-radius:6px;
+    border:1px solid #84bbf3;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:6px 24px;
+    text-decoration:none;
     text-shadow:0px 1px 0px #528ecc;
     width: 150px;
     text-align: center;
 }
 .VoAButton:hover {
-	background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
-	background-color:#378de5;
+    background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+    background-color:#378de5;
 }
 .VoAButton:active {
-	position:relative;
-	top:1px;
+    position:relative;
+    top:1px;
 }
 
         
@@ -134,14 +147,14 @@ lesson a:hover {
     #sect {
         padding-top: 10px;
         float: none; 
-		width: auto; 
-		padding: 0.5em;
+        width: auto; 
+        padding: 0.5em;
     }
 
-	#lessonMenu {
+    #lessonMenu {
         float: none; 
-		width: auto; 
-		text-align: center; 
-		padding: 0.5em; 
+        width: auto; 
+        text-align: center; 
+        padding: 0.5em; 
     }
 }
