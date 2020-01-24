@@ -192,6 +192,26 @@ h2{
     width: 50%;
 }        
 
+.level_2_lesson1_table{
+    display: block;
+    width: 100%;
+    overflow: auto;
+    word-break: normal;
+}
+.voa_lesson1_table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #768492;
+    width: 50%;
+    margin: 0 auto 25px;
+    
+}    
+.voa_lesson1_table td{
+border: 1px solid black;
+text-align: center;
+font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 @media only screen and (max-width: 64em) and (max-width: 37.5em){
     #sect {
         padding-top: 10px;
