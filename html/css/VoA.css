@@ -78,7 +78,7 @@
     width: 87%; 
     margin-right: 10px; 
     float: right; 
-    background-color: white
+    background-color: white;
     padding: 60px 10px 10px 10px;
 }
 
@@ -207,12 +207,38 @@ h2{
     
 }    
 .voa_lesson1_table td{
-border: 1px solid black;
-text-align: center;
-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
-font-size:1.5vw;
+    border: 1px solid black;
+    text-align: center;
+    font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size:1.5vw;
 }
 
+/** Start of Prototype CSS */
+.voa_login_body{
+    background: #4E98D8;
+}
+
+.voa_login_container{
+    margin: 50px auto;
+    width: 640px;
+    -moz-border-radius:15px 15px 15px 15px;
+    -moz-box-shadow:0 0 10px #333333;
+    border:3px solid white;
+}
+
+.login {
+    position: relative;
+    margin: 0 auto;
+    padding: 20px 20px 20px;
+    width: 310px;
+}
+
+.login p.submit {
+    text-align: center;
+  }
+
+
+/** Start of Media query */
 @media only screen and (max-width: 64em) and (max-width: 37.5em){
     #sect {
         padding-top: 10px;
@@ -231,5 +257,5 @@ font-size:1.5vw;
     width: 100%; 
     padding: 0px 0px 0px 10%;
     font-size:1.5vw;
-}
+    }
 }
