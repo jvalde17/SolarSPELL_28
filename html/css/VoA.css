@@ -78,7 +78,7 @@
     width: 87%; 
     margin-right: 10px; 
     float: right; 
-    background-color: white
+    background-color: white;
     padding: 60px 10px 10px 10px;
 }
 
@@ -207,12 +207,89 @@ h2{
     
 }    
 .voa_lesson1_table td{
-border: 1px solid black;
-text-align: center;
-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
-font-size:1.5vw;
+    border: 1px solid black;
+    text-align: center;
+    font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size:1.5vw;
 }
 
+/** Start of Prototype CSS */
+.voa_login_container{
+    color: white;
+    margin: auto;
+    width: 300px;
+    height: 250px;
+    border-radius: 1em;
+    border: 2px solid #F8D880;
+    background: #2fa4e7;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.login {
+    position: relative;
+    padding: 50px 20px 50px 20px;
+}
+
+.login h1 {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+.login input[type=text] {
+    width: 100%;
+    color: black;
+    border: 2px solid #F8D880;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.login input[type=text]:focus {
+    border-color: black;
+}
+
+.login p.submit {
+    text-align: center;
+    font-size: 14px;
+    color: white;
+  }
+
+.login input[type=submit] {
+    box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+    background:linear-gradient(to bottom, #79bbff 5%, #41ACE9 100%);
+    background-color:#41ACE9;
+    border-radius:6px;
+    border:1px solid #84bbf3;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:6px 24px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #528ecc;
+    width: 150px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.login input[type=submit]:hover {
+    background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+    background-color:#378de5; 
+}
+
+.login input[type=submit]:active {
+    position:relative;
+    top:1px;
+}
+
+/** Start of Media query */
 @media only screen and (max-width: 64em) and (max-width: 37.5em){
     #sect {
         padding-top: 10px;
@@ -231,5 +308,5 @@ font-size:1.5vw;
     width: 100%; 
     padding: 0px 0px 0px 10%;
     font-size:1.5vw;
-}
+    }
 }
