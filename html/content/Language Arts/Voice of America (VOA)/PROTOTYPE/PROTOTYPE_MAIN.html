@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!-- is this the front end? -->
 <html lang="en">
@@ -9,9 +10,9 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <!-- <link rel="icon" href="/img/favicon.ico"> -->
+    <!-- <link rel="icon" href="/img id = "lessonimg"/favicon.ico"> -->
 
-    <title>SPELL</title>
+    <title>Prototype Lesson Page</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.css" rel="stylesheet">
@@ -20,10 +21,9 @@
     <link href="/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="/css/starter-template.css" rel="stylesheet">
+    <link href="/css/VoA.css" rel="stylesheet">
 
     <script src="/js/ie-emulation-modes-warning.js"></script>
-
 </head>
 
 <body>
@@ -110,7 +110,7 @@
                             <li class="divider"></li>
                             <li><a href="/content/Language%20Arts/UCLA%20K-12%20Gateway/">UCLA K-12 Gateway</a></li>
                             <li class="divider"></li>
-                            <li><a href="/content/Language%20Arts/Voice%20of%20America%20(VOA)/VOA_Landing_Page.html">Let's Learn English (VoA)</a></li>                           
+                            <li><a href="/content/Language%20Arts/Voice%20of%20America%20(VOA)/VOA_Landing_Page.html">Let's Learn English (VOA)</a></li>                           
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -187,7 +187,7 @@
                             <li><a href="/content/Reference%20Tools/Sustainable%20Development%20Goals/">Sustainable Development Goals</a></li> 
                             <li class="divider"></li> 
                             <li><a href="/content/Reference%20Tools/Teaching%20Resources/">Teaching Resources</a></li> 
-	<li class="divider"></li> 
+    <li class="divider"></li> 
                             <li><a href="/content/Reference%20Tools/SolarSPELL%20Resources/">SolarSPELL Resources</a></li> 
                             <li class="divider"></li>
                             <li><a href="/en-medline_plus/">Medical Encyclopedia</a></li>
@@ -195,7 +195,7 @@
                             <li><a href="/Wikipedia/">Wikipedia</a></li>
                             <li class="divider"></li>
                             <li><a href="/VR/">Virtual Field Trip</a></li>
-	<li class="divider"></li>
+    <li class="divider"></li>
                             <li><a href="/phet/index.html">PhET</a></li>
                             <li class="divider"></li>
                             <li><a href="http://10.10.10.10:8008">KaLite</a></li> 
@@ -205,95 +205,25 @@
             </div>
         </div>
     </nav>
+    <h2>PROTOTYPE LESSON PAGE</h2>
+   
 
-    <div class="container">
-        <!-- This should be replaced by a more suitable container -->
-        <div id="mycarousel" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="item active">
-                    <img src="/img/east africa banner v3-01 w Text.png" alt="SPELL background" class="img-responsive">
-                    <div class="container"> <!-- Can we delete this? -->
-                        <div class="carousel-caption">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-xs-12 col-lg-4">
-            <br />     
-            <a id="Link1" onclick="updateLink1()">
-            <img src="/content/Language%20Arts/Voice%20of%20America%20(VOA)/Let's%20Learn%20English/SPELL_VOA_LETS_LEARN_ENGLISH_FINAL.png" class="center-block" style="max-height:140px">
-            </a> 
-            <script type="text/javascript">
-            function getUrlVars() {
-            var vars = {};
-            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-                vars[key] = value;
-            });
-            return vars; }           
-            function getUrlParam(parameter, defaultvalue){
-                var urlparameter = defaultvalue;
-                if(window.location.href.indexOf(parameter) > -1){
-                    urlparameter = getUrlVars()[parameter]; }
-                return urlparameter;}
-
-            function updateLink1() {
-              var username = getUrlParam('user', 'empty')
-              var strLink1 = "/content/Language%20Arts/Voice%20of%20America%20(VOA)/Let's%20Learn%20English/letsLearnEnglishMain.html" + "?user="+username;
-              document.getElementById("Link1").href = strLink1;
-            }
-            </script>
-            </div>
-
-            <div class="col-xs-12 col-lg-4">
-            <br /> 
-               <!-- <a href="/content/Language%20Arts/Voice%20of%20America%20(VOA)/Let's%20Learn%20English%202/letsLearnEnglishMainLevel2.html">-->
-            <a id="Link2" onclick="updateLink2()">
-                    <img src="/content/Language%20Arts/Voice%20of%20America%20(VOA)/Let's%20Learn%20English%202/SPELL_VOA_LETS_LEARN_ENGLISH_LEVEL_2_FINAL.png" class="center-block" style="max-height:140px">
-                </a>
-            <script type="text/javascript">
-            function updateLink2() {
-              var username = getUrlParam('user', 'empty')
-              var strLink2 = "/content/Language%20Arts/Voice%20of%20America%20(VOA)/Let's%20Learn%20English%202/letsLearnEnglishMainLevel2.html" + "?user="+username;
-              document.getElementById("Link2").href = strLink2;
-            }    
-            </script>    
-            </div>
-
-            <div class="col-xs-12 col-lg-4">
-                <br /> 
-                <!-- <a href="/content/Language%20Arts/Voice%20of%20America%20(VOA)/Let's%20Teach%20English/letsTeachEnglishMain.html">
-                     -->
-                <a id="Link3" onclick="updateLink3()">
-                    <img src="/content/Language%20Arts/Voice%20of%20America%20(VOA)/Let's%20Teach%20English/SPELL_VOA_LETS_TEACH_ENGLISH_FINAL.png" class="center-block" style="max-height:140px">
-                </a>
-            <script type="text/javascript">
-            function updateLink3() {
-              var username = getUrlParam('user', 'empty')
-              var strLink3 = "/content/Language%20Arts/Voice%20of%20America%20(VOA)/Let's%20Teach%20English/letsTeachEnglishMain.html" + "?user="+username;
-              document.getElementById("Link3").href = strLink3;
-            }    
-            </script>    
-            </div>
-            
-             <div class="col-xs-12 col-lg-4">
-                <br /> <!-- Python  -->
-                <a href="/cgi_bin/login.py">
-                    <img src="/content/Language%20Arts/Voice%20of%20America%20(VOA)/Python_logo-512.png" class="center-block" style="max-height:140px">
-                </a>
-            </div>
-
-            <div class="col-xs-12 col-lg-4">
-                <br /> <!-- Why? (Same for the ones below) -->
-                <a href="/content/Language%20Arts/Voice%20of%20America%20(VOA)/PROTOTYPE/PROTOTYPE_MAIN.html">
-                    <img src="/content/Language%20Arts/Voice%20of%20America%20(VOA)/PROTOTYPE/SPELL_VOA_PROTOTYPE_FINAL.png" class="center-block" style="max-height:140px">
-                </a>
-            </div>
-        </div>
+    <div id= "imgBody">
+    <a href="/content/Language Arts/Voice of America (VOA)/Let's Learn English/Prototype_Lesson1.html">
+    	<img id = "lessonimg" src="/content/Language Arts/Voice of America (VOA)/Let's Learn English/VOA_IMAGES/lesson1.jpg">
+    </a>
+    <a href="/content/Language Arts/Voice of America (VOA)/Let's Learn English/Prototype_Lesson1_Lesson2.html">
+   		<img id = "lessonimg" src="/content/Language Arts/Voice of America (VOA)/Let's Learn English/VOA_IMAGES/lesson2.jpg">
+    </a>
+    <a href="/content/Language Arts/Voice of America (VOA)/Let's Learn English/Prototype_Lesson1_Lesson3.html">
+    	<img id = "lessonimg" src="/content/Language Arts/Voice of America (VOA)/Let's Learn English/VOA_IMAGES/lesson3.jpg">
+    </a>
+    <a href="/content/Language Arts/Voice of America (VOA)/Let's Learn English/Prototype_Lesson1_Lesson4.html">
+    	<img id = "lessonimg" src="/content/Language Arts/Voice of America (VOA)/Let's Learn English/VOA_IMAGES/lesson4.jpg">
+    </a>
+   
+   
     </div>
-    <br />
     <!-- Bootstrap core JavaScript -->
     <!-- Placed at the end of the document so the pages load faster -->
 
