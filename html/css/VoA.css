@@ -153,11 +153,11 @@ lesson a:hover {
     width: 150px;
     text-align: center;
 }
-.VoAButton:hover {
+.VoAButton:hover, .login input[type=submit]:hover {
     background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
     background-color:#378de5;
 }
-.VoAButton:active {
+.VoAButton:active, .login input[type=submit]:active {
     position:relative;
     top:1px;
 }
@@ -257,7 +257,7 @@ h2{
     text-align: center;
     font-size: 14px;
     color: white;
-  }
+}
 
 .login input[type=submit] {
     box-shadow:inset 0px 1px 0px 0px #bbdaf7;
@@ -274,19 +274,8 @@ h2{
     padding:6px 24px;
     text-decoration:none;
     text-shadow:0px 1px 0px #528ecc;
-    width: 150px;
+    width: 250px;
     text-align: center;
-    margin-top: 10px;
-}
-
-.login input[type=submit]:hover {
-    background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
-    background-color:#378de5; 
-}
-
-.login input[type=submit]:active {
-    position:relative;
-    top:1px;
 }
 
 /** Start of Media query */
