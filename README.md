@@ -20,4 +20,10 @@ Add directory tag as below:
 <Directory /var/www/html>
        Options +ExecCGI
        AddHandler cgi-script .py
+
 </Directory>
+
+###Restart Apache by using the following command:
+sudo service apache restart
+
+
