@@ -23,6 +23,7 @@
     <link href="/css/starter-template.css" rel="stylesheet">
 
     <script src="/js/ie-emulation-modes-warning.js"></script>
+
 </head>
 
 <body>
@@ -221,30 +222,74 @@
 
         <div class="row">
             <div class="col-xs-12 col-lg-4">
-                <br /> <!-- Why? (Same for the ones below) -->
-                <a href="/content/Language%20Arts/Voice%20of%20America%20(VOA)/Let's%20Learn%20English/letsLearnEnglishMain.html">
-                    <img src="/content/Language%20Arts/Voice%20of%20America%20(VOA)/Let's%20Learn%20English/SPELL_VOA_LETS_LEARN_ENGLISH_FINAL.png" class="center-block" style="max-height:140px">
-                </a>
+            <br />     
+            <a id="Link1" onclick="updateLink1()">
+            <img src="/content/Language%20Arts/Voice%20of%20America%20(VOA)/Let's%20Learn%20English/SPELL_VOA_LETS_LEARN_ENGLISH_FINAL.png" class="center-block" style="max-height:140px">
+            </a> 
+            <script type="text/javascript">
+            function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+                vars[key] = value;
+            });
+            return vars; }           
+            function getUrlParam(parameter, defaultvalue){
+                var urlparameter = defaultvalue;
+                if(window.location.href.indexOf(parameter) > -1){
+                    urlparameter = getUrlVars()[parameter]; }
+                return urlparameter;}
+
+            function updateLink1() {
+              var username = getUrlParam('user', 'empty')
+              var strLink1 = "/content/Language%20Arts/Voice%20of%20America%20(VOA)/Let's%20Learn%20English/letsLearnEnglishMain.html" + "?user="+username;
+              document.getElementById("Link1").href = strLink1;
+            }
+            </script>
             </div>
+
             <div class="col-xs-12 col-lg-4">
-                <br /> <!-- Why? (Same for the ones below) -->
-                <a href="/content/Language%20Arts/Voice%20of%20America%20(VOA)/Let's%20Learn%20English%202/letsLearnEnglishMainLevel2.html">
+            <br /> 
+               <!-- <a href="/content/Language%20Arts/Voice%20of%20America%20(VOA)/Let's%20Learn%20English%202/letsLearnEnglishMainLevel2.html">-->
+            <a id="Link2" onclick="updateLink2()">
                     <img src="/content/Language%20Arts/Voice%20of%20America%20(VOA)/Let's%20Learn%20English%202/SPELL_VOA_LETS_LEARN_ENGLISH_LEVEL_2_FINAL.png" class="center-block" style="max-height:140px">
                 </a>
+            <script type="text/javascript">
+            function updateLink2() {
+              var username = getUrlParam('user', 'empty')
+              var strLink2 = "/content/Language%20Arts/Voice%20of%20America%20(VOA)/Let's%20Learn%20English%202/letsLearnEnglishMainLevel2.html" + "?user="+username;
+              document.getElementById("Link2").href = strLink2;
+            }    
+            </script>    
             </div>
+
             <div class="col-xs-12 col-lg-4">
-                <br /> <!-- Why? (Same for the ones below) -->
-                <a href="/content/Language%20Arts/Voice%20of%20America%20(VOA)/Let's%20Teach%20English/letsTeachEnglishMain.html">
+                <br /> 
+                <!-- <a href="/content/Language%20Arts/Voice%20of%20America%20(VOA)/Let's%20Teach%20English/letsTeachEnglishMain.html">
+                     -->
+                <a id="Link3" onclick="updateLink3()">
                     <img src="/content/Language%20Arts/Voice%20of%20America%20(VOA)/Let's%20Teach%20English/SPELL_VOA_LETS_TEACH_ENGLISH_FINAL.png" class="center-block" style="max-height:140px">
                 </a>
+            <script type="text/javascript">
+            function updateLink3() {
+              var username = getUrlParam('user', 'empty')
+              var strLink3 = "/content/Language%20Arts/Voice%20of%20America%20(VOA)/Let's%20Teach%20English/letsTeachEnglishMain.html" + "?user="+username;
+              document.getElementById("Link3").href = strLink3;
+            }    
+            </script>    
             </div>
             
+             <div class="col-xs-12 col-lg-4">
+                <br /> <!-- Python  -->
+                <a href="/cgi_bin/login.py">
+                    <img src="/content/Language%20Arts/Voice%20of%20America%20(VOA)/Python_logo-512.png" class="center-block" style="max-height:140px">
+                </a>
+            </div>
+
             <div class="col-xs-12 col-lg-4">
                 <br /> <!-- Why? (Same for the ones below) -->
                 <a href="/content/Language%20Arts/Voice%20of%20America%20(VOA)/PROTOTYPE/PROTOTYPE_MAIN.html">
                     <img src="/content/Language%20Arts/Voice%20of%20America%20(VOA)/PROTOTYPE/SPELL_VOA_PROTOTYPE_FINAL.png" class="center-block" style="max-height:140px">
                 </a>
-            </div>
             </div>
         </div>
     </div>
