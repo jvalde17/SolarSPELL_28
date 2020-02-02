@@ -27,8 +27,12 @@ Add directory tag as below:
        
 
 
-###Restart Apache by using the following command:
+Restart Apache by using the following command:
         
         sudo service apache restart
 
+Enable cgi to allow python scripts to run inside Apache hosted directory
 
+       sudo a2dismod mpm_event
+       sudo a2enmod mpm_prefork cgi
+       
