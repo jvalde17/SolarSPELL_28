@@ -22,16 +22,14 @@ print
 
 lesson_user = str(sys.argv[1])
 inp = lesson_user.split(':')
-#for temp in inp:
-#	print temp
+
 
 lesson_page = inp[0]
 userid = ''
 
 #
 def redirectToCallingUrl():
-	#meta_str = '<meta http-equiv = "refresh" content = "0; url = \content/Language Arts/Voice of America (VOA)/Let%27s Learn English/{}" />'.format(lesson_page)
-	meta_str = '<meta http-equiv = "refresh" content = "0; url = \content/Language Arts/Voice of America (VOA)/Let%27s Learn English/{}?tracking=Yes" />'.format(lesson_page)
+	meta_str = '<meta http-equiv = "refresh" content = "0; url = \content/Language Arts/Voice of America (VOA)/Let%27s Learn English/{}?name={}" />'.format(lesson_page, userid)
 	print '<html>'
 	print '<head>'
 	print meta_str
@@ -40,8 +38,6 @@ def redirectToCallingUrl():
 
 def updateBrowsingTable():
 	unix = int(time.time())
-	#today = str(datetime.datetime.fromtimestamp(unix).strftime('%Y-%m-%d %H:%M:%S'))
-	#curtime = time.time()
 	today= 'na'
 	curtime = datetime.now()  
 	conn = sqlite3.connect('../../db/SS_users.db')
@@ -105,7 +101,6 @@ dat_list = dat.split(',')
 last_user = dat_list[0]
 dateTime_last_user = dat_list[2]
 
-print '>>>>>>>>>>>>>>>>>'
 print dateTime_last_user
 l_user = ''
 
@@ -115,9 +110,8 @@ if len(dat) > 3:
 	print l_user
 	print dt_l_user
 
+#get time diff in hours
 diff = timeDiff(dt_l_user)
-print 'Diff = '
-print diff
 
 valid_user = 0
 if diff < 5:
