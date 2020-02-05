@@ -29,7 +29,19 @@ userid = ''
 
 #
 def redirectToCallingUrl():
-	meta_str = '<meta http-equiv = "refresh" content = "0; url = \content/Language Arts/Voice of America (VOA)/Let%27s Learn English/{}?name={}" />'.format(lesson_page, userid)
+	meta_str = ''
+	if 'Lesson' in lesson_page:
+		if 'Level_2' in lesson_page: #Level 2
+			meta_str = '<meta http-equiv = "refresh" content = "0; url = /content/Language%20Arts/Voice%20of%20America%20%28VOA%29/Let%27s%20Learn%20English%202/{}?name={}"/>'.format(lesson_page, userid) 
+		else: #Level 1
+			meta_str = '<meta http-equiv = "refresh" content = "0; url = /content/Language%20Arts/Voice%20of%20America%20%28VOA%29/Let%27s%20Learn%20English/{}?name={}"/>'.format(lesson_page, userid)
+
+	if 'unit' in lesson_page: # teach
+		meta_str = '<meta http-equiv = "refresh" content = "0; url = /content/Language%20Arts/Voice%20of%20America%20%28VOA%29/Let%27s%20Teach%20English/{}?name={}"/>'.format(lesson_page, userid)
+	
+	if 'PROTOTYPE' in lesson_page:
+		meta_str = '<meta http-equiv = "refresh" content = "0; url = /content/Language%20Arts/Voice%20of%20America%20%28VOA%29/PROTOTYPE/{}?name={}"/>'.format(lesson_page, userid)
+	
 	print '<html>'
 	print '<head>'
 	print meta_str
