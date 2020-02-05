@@ -90,7 +90,7 @@
 
 lesson {
     display: block; 
-    background-color: #41ACE9; 
+    background-color: #2fa4e7; 
     position:fixed; 
     height: 100%;
     -webkit-backface-visibility: hidden; 
@@ -135,7 +135,7 @@ lesson a:hover {
     clear:both
 }
 
-.VoAButton {
+.VoAButton, .logout input[type=submit] {
     box-shadow:inset 0px 1px 0px 0px #bbdaf7;
     background:linear-gradient(to bottom, #79bbff 5%, #41ACE9 100%);
     background-color:#41ACE9;
@@ -153,11 +153,11 @@ lesson a:hover {
     width: 150px;
     text-align: center;
 }
-.VoAButton:hover, .login input[type=submit]:hover {
+.VoAButton:hover, .login input[type=submit]:hover, .logout input[type=submit]:hover {
     background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
     background-color:#378de5;
 }
-.VoAButton:active, .login input[type=submit]:active {
+.VoAButton:active, .login input[type=submit]:active, .logout input[type=submit]:active {
     position:relative;
     top:1px;
 }
@@ -234,6 +234,10 @@ h2{
     padding: 50px 20px 50px 20px;
 }
 
+.logout {
+    text-align: right;
+}
+
 .login h1 {
     color: white;
     font-weight: bold;
@@ -247,6 +251,14 @@ h2{
     border: 2px solid #F8D880;
     font-size: 14px;
     padding: 5px;
+}
+
+.logout input[type=text] {
+    font-weight: bold;
+    font-size: 28px;
+    color: #2fa4e7;
+    border-color: transparent;
+    text-align: right;
 }
 
 .login input[type=text]:focus {
