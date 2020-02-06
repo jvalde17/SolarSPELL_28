@@ -16,7 +16,7 @@ print
 form = cgi.FieldStorage()
 userlogged =  form.getvalue('userid')
 if not userlogged : 
-	userlogged = 'noname'
+	userlogged = '########'
 
 
 conn = sqlite3.connect('../../db/SS_users.db')
@@ -24,7 +24,7 @@ c = conn.cursor()
 #print "Opened database successfully";
 
 def testprint():
-	print "hello there yah "
+	print "hello there "
 	print userlogged
 
 
@@ -86,12 +86,15 @@ def saveCurrentUserToTable():
 
 #testprint()
 saveCurrentUserToTable()
+if userlogged == '########':
+	goToVoAHome()
+	c.close
+	conn.close()
+
+
 mydat = read_from_db()
 
-#print len(mydat)
 dat_array = mydat.split(',')
-#print dat_array[0]+ ':'
-#print dat_array[1]+ ':'
 print dat_array
 print 'Length of mydat = ' + str(len(mydat)) 
 
@@ -99,13 +102,13 @@ print 'Length of mydat = ' + str(len(mydat))
 if len(mydat) > 5:
 	mpage = cleanPageStr(dat_array[3])
 	goToLastVisitedUrl(mpage)
+	c.close
+	conn.close()
 else :
 	print 'No history'
 	goToVoAHome()
+	c.close
+	conn.close()
 	
-
-
-c.close
-conn.close()
 
 
