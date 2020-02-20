@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # _*_ coding: UTF-8 _*_
 
-import time
+import time, Cookie
 from datetime import datetime
 import sqlite3
 import sys
@@ -9,8 +9,8 @@ import cgi
 import cgitb
 cgitb.enable()
 
-print "Content-Type: text/html; charset=utf-8"
-print
+#print "Content-Type: text/html; charset=utf-8"
+#print
 
 
 form = cgi.FieldStorage()
@@ -18,8 +18,22 @@ userlogged =  form.getvalue('userid')
 if not userlogged : 
 	userlogged = '######'
 
-meta_str = '<meta http-equiv = "refresh" content = "0; url = /content/Language Arts/Voice of America (VOA)/VOA_Landing_Page.html" />' 
+# Instantiate a SimpleCookie object
+cookie = Cookie.SimpleCookie()
+
+# The SimpleCookie instance is a mapping
+cookie['userid'] = userlogged
+
+# Output the HTTP message containing the cookie
+print cookie
+print 'Content-Type: text/html\n'
+
+print '<html><body>'
+print 'User is', userlogged
+print '</body></html>'
+
 def goToMainUrl():
+	meta_str = '<meta http-equiv = "refresh" content = "0; url = /content/Language Arts/Voice of America (VOA)/VOA_Landing_Page.html" />' 
 	print '<html>'
 	print '<head>'
 	print meta_str
@@ -43,5 +57,3 @@ def saveCurrentUserToTable():
 
 saveCurrentUserToTable()
 goToMainUrl()
-
-

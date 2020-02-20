@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # _*_ coding: UTF-8 _*_
 
-import time
+import time, Cookie
 from datetime import datetime
 import sqlite3
 import sys
@@ -9,19 +9,34 @@ import cgi
 import cgitb
 cgitb.enable()
 
-print "Content-Type: text/html; charset=utf-8"
-print
+#print "Content-Type: text/html; charset=utf-8"
+#print
 
 
 form = cgi.FieldStorage()
 userlogged =  form.getvalue('userid')
 if not userlogged : 
-	userlogged = '########'
+	userlogged = '######'
+
+# Instantiate a SimpleCookie object
+cookie = Cookie.SimpleCookie()
+
+# The SimpleCookie instance is a mapping
+cookie['userid'] = userlogged
+
+# Output the HTTP message containing the cookie
+print cookie
+print 'Content-Type: text/html\n'
+
+print '<html><body>'
+print 'User is', userlogged
+print '</body></html>'
 
 
-conn = sqlite3.connect('../../db/SS_users.db')
+conn = sqlite3.connect('/var/www/db/SS_users.db')
 c = conn.cursor()
 #print "Opened database successfully";
+
 
 def testprint():
 	print "hello there "
