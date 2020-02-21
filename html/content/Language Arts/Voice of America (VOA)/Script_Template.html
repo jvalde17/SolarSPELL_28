@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--SCRIPT TEMPLATE-->
+<!--
+    This template is minimal and only shows where to put new script code
+    relative to parts of existing lessons. Large sections of normal lesson
+    code are left out. For clarity, sections where large parts of code are
+    left our will have a comment in the style of:
+        #########################
+        SUMMARY OF CONTENT EXCLUDED
+        #########################
+
+    Script code sections will be surrounded by two comments in the style of:
+        ++++++++++++++++++++start of script code section++++++++++++++++++++
+        (new script code here)
+        ++++++++++++++++++++end of script code section++++++++++++++++++++
+
+    Add script code in lessons relative to the location of these significant 
+    code sections and the "identifying" markers left in.
+-->
+<html>
+    <head>
+            <title>VoA Lesson 1</title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes"/>
+            <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"> </script>   
+            <![endif]-->
+            <meta name="Lesson 1 VoA" content="Lesson 1 VoA Learning English" />
+
+            <!-- Bootstrap core CSS -->
+            <link href="/css/bootstrap.css" rel="stylesheet">
+
+            <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+            <link href="/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+            <!-- Custom styles for this template -->
+            <link href="/css/starter-template.css" rel="stylesheet">
+
+            <!-- VoA style for this template -->
+            <link href="/css/VoA.css" rel="stylesheet">
+            
+            <!--++++++++++++++++++++start of script code section++++++++++++++++++++-->
+
+            <!-- This script initiates an automatic web page redirection and logging, as the page is loaded-->
+            <script type="text/javascript">
+            var name = '';
+            function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+                vars[key] = value;
+            });
+            return vars; }           
+            function getUrlParam(parameter, defaultvalue){
+                var urlparameter = defaultvalue;
+                if(window.location.href.indexOf(parameter) > -1){
+                    urlparameter = getUrlVars()[parameter]; }
+                return urlparameter;}
+
+            function updateLessonLogUser() {
+                name = getUrlParam('name', 'empty')
+                var str_link1 = "/cgi-bin/update_tracking_table.py?VoA_Lesson1.html:";
+                
+                if (name == 'empty')
+                    window.location = str_link1;
+            }
+
+            function updateName() {
+                document.getElementById('userid').value = name;
+                var x = document.getElementById('userblock');
+                if (name == 'empty' || name == '######' || name == '') {
+                    x.style.display = "none";
+                }
+                else {
+                    x.style.display = "block";
+                }
+            }
+
+            updateLessonLogUser.call();
+            </script>;
+
+            <!--++++++++++++++++++++end of script code section++++++++++++++++++++-->
+    </head>
+
+    <!--++++++++++++++++++++start of script code section++++++++++++++++++++-->
+
+    <body onload="updateName()" >
+
+    <!--++++++++++++++++++++end of script code section++++++++++++++++++++-->
+
+    <!--
+        ###################################################
+        NAV BAR SECTION EXCLUDED
+        ###################################################
+    -->
+
+    <div id = "clearAll"></div>
+
+    <div id = "sect">
+            <!--++++++++++++++++++++start of script code section++++++++++++++++++++-->
+
+            <!-- Start of login name and logout btn -->
+            <div id = "sepDiv">
+                <div class ="logout" id="userblock">
+                    <form method="post" action="/cgi-bin/logout.py">
+                    <p><input type="text" name="userid" id="userid"></p>
+                    <p class="submit"><input type="submit" name="voa_logout_btn" value="Logout"></p>
+                    </form>
+                </div>
+            </div>
+
+            <!--++++++++++++++++++++end of script code section++++++++++++++++++++-->
+
+                <div id = "sepDiv">
+                    <h1 class = "VOAh1">
+                        Lesson 1: Welcome!
+                    </h1>
+                </div>
+    <!--
+        ###################################################
+        REMAINDER OF LESSON AND SIDE BAR EXLUCDED
+        ###################################################
+    -->
+</html>
