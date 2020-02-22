@@ -65,6 +65,7 @@
             }
 
             function updateName() {
+                name = decodeURI(name);
                 document.getElementById('userid').value = name;
                 var x = document.getElementById('userblock');
                 if (name == 'empty' || name == '######' || name == '') {
