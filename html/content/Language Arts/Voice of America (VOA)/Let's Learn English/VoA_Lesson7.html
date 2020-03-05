@@ -21,9 +21,46 @@
             <!-- VoA style for this template -->
             <link href="/css/VoA.css" rel="stylesheet">
 
+            <!-- This script initiates an automatic web page redirection and logging, as the page is loaded-->
+            <script type="text/javascript">
+                var name = '';
+                function getUrlVars() {
+                var vars = {};
+                var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+                    vars[key] = value;
+                });
+                return vars; }           
+                function getUrlParam(parameter, defaultvalue){
+                    var urlparameter = defaultvalue;
+                    if(window.location.href.indexOf(parameter) > -1){
+                        urlparameter = getUrlVars()[parameter]; }
+                    return urlparameter;}
+    
+                function updateLessonLogUser() {
+                    name = getUrlParam('name', 'empty')
+                    var str_link1 = "/cgi-bin/update_tracking_table.py?VoA_Lesson7.html:";
+    
+                    if (name == 'empty')
+                        window.location = str_link1;
+                }
+    
+                function updateName() {
+                    name = decodeURI(name);
+                    document.getElementById('userid').value = name;
+                    var x = document.getElementById('userblock');
+                    if (name == 'empty' || name == '######' || name == '') {
+                        x.style.display = "none";
+                    }
+                    else {
+                        x.style.display = "block";
+                    }
+                }
+    
+                updateLessonLogUser.call();
+            </script>
     </head>
 
-    <body>
+    <body onload="updateName()">
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -59,7 +96,7 @@
                                 <li class="divider"></li>
                                 <li><a href="/content/Environment/Geography/">Geography</a></li>
                                 <li class="divider"></li>
-    <li><a href="/content/Environment/History%and%Social%Science/">History and Social Science</a></li>
+                                <li><a href="/content/Environment/History%and%Social%Science/">History and Social Science</a></li>
                                 <li class="divider"></li>
                                 <li><a href="/content/Environment/Natural%20Habitat/">Natural Habitat</a></li>
                                 <li class="divider"></li>
@@ -184,7 +221,7 @@
                                 <li><a href="/content/Reference%20Tools/Sustainable%20Development%20Goals/">Sustainable Development Goals</a></li> 
                                 <li class="divider"></li> 
                                 <li><a href="/content/Reference%20Tools/Teaching%20Resources/">Teaching Resources</a></li> 
-        <li class="divider"></li> 
+                                <li class="divider"></li> 
                                 <li><a href="/content/Reference%20Tools/SolarSPELL%20Resources/">SolarSPELL Resources</a></li> 
                                 <li class="divider"></li>
                                 <li><a href="/en-medline_plus/">Medical Encyclopedia</a></li>
@@ -192,7 +229,7 @@
                                 <li><a href="/Wikipedia/">Wikipedia</a></li>
                                 <li class="divider"></li>
                                 <li><a href="/VR/">Virtual Field Trip</a></li>
-        <li class="divider"></li>
+                                <li class="divider"></li>
                                 <li><a href="/phet/index.html">PhET</a></li>
                                 <li class="divider"></li>
                                 <li><a href="http://10.10.10.10:8008">KaLite</a></li> 
@@ -203,33 +240,38 @@
             </div>
         </nav>
     
-
     <div id = "clearAll"></div>
 
     <div id = "sect">
+        <!-- Start of login name and logout btn -->
+        <div class ="logout" id="userblock">
+            <form method="post" action="/cgi-bin/logout.py">
+            <p><input type="text" name="userid" id="userid"></p>
+            <p class="submit"><input type="submit" name="voa_logout_btn" value="Logout"></p>
+            </form>
+        </div>
+
         <div id = "sepDiv">
-        <h1 class = "VOAh1">
-            Lesson 7: What Are You Doing?
-        </h1>
-    </div>
+            <h1 class = "VOAh1">
+                Lesson 7: What Are You Doing?
+            </h1>
+        </div>
+
+        <div id = "sepDiv">
+            <P class = "VOAp">
+                <strong>Objectives</strong>
+            </p>
+            <ul class = "VOAul">
+                <p class = "VOAobjective">Students learn how to use the present continuous tense.</p> 
+                <p class = "VOAobjective">Students learn how to talk about everyday activities.</p> 
+                <p class = "VOAobjective">Students learn to listen and respond to questions about
+                everyday activities.</p> 
+                <p class = "VOAobjective">Students learn to use the strategy, <em>Ask to Clarify</em>, as they listen for information about everyday activities.</p> 
+            </ul>
+        </div>
 
     <div id = "sepDiv">
-        <P class = "VOAp">
-            <strong>Objectives</strong>
-        </p>
-        <ul class = "VOAul">
-            <p class = "VOAobjective">Students learn how to use the present continuous tense.</p> 
-            <p class = "VOAobjective">Students learn how to talk about everyday activities.</p> 
-            <p class = "VOAobjective">Students learn to listen and respond to questions about
-			 everyday activities.</p> 
-            <p class = "VOAobjective">Students learn to use the strategy, <em>Ask to Clarify</em>, as they listen for information about everyday activities.</p> 
-        </ul>
-    </div>
-
-    <div id = "sepDiv">
-        <P class = "VOAp">
-            <strong>Review</strong> the following videos:
-        </p>
+        <p class = "VOAp"><strong>Review</strong> the following videos:</p>
         
         <div class="VOAvideo">
             <video class = "VOAvidwrapper" controls>
@@ -247,6 +289,7 @@
         </div>
 
         <p class = "VOAp">Pronunciation Practice</p>
+
         <div class="VOAvideo">
             <video class = "VOAvidwrapper" controls>
                 <source src="/content/Language%20Arts/Voice%20of%20America%20%28VOA%29/Let's%20Learn%20English/Lesson%2007_%20What%20Are%20You%20Doing_/Lesson%2007%20Teaching%20Resources/Lesson%2007%20Pronunciation%20Practice.mp4" type="video/mp4">
@@ -311,11 +354,11 @@
                 <P class = "VOAsmaller"><strong>Caty: </strong>It’s Caty.</P>
                 <P class = "VOAsmaller"><strong>Anna: </strong>Right. Thanks ... Ms. Weaver</P>
            
-            <P class = "VOAp">
+            <p class = "VOAp">
                 <strong>Review</strong> the following audio:
             </p>
             
-            <P class = "VOAp">
+            <p class = "VOAp">
                     <audio controls>
                             <source src="/content/Language%20Arts/Voice%20of%20America%20%28VOA%29/Let's%20Learn%20English/Lesson%2007_%20What%20Are%20You%20Doing_/Lesson%2007%20Teaching%20Resources/Lesson%2007%20Conversation.mp3" type="audio/mpeg">
                             Your browser does not support the audio element.
@@ -357,19 +400,20 @@
 
     </div>
 
-    <div id = "sepDiv">
-        <P class = "VOAp">Learning Strategy</p>
+        <div id = "sepDiv">
+            <P class = "VOAp">Learning Strategy</p>
             <P class = "VOAsmaller"><strong>Learning Strategies</strong> are the thoughts and actions that help make learning easier or more effective. The learning strategy for this lesson is <em>Ask to Clarify</em>.</p>
             <P class = "VOAsmaller">In the video you see Anna ask Amelia: "What are you doing?" Amelia answers, "I’m reading." Then Anna asks a question to clarify: "Are you reading the news?</P>
             <P class = "VOAsmaller">Asking a question to clarify is a very useful learning strategy, because it helps you get more information. You can also learn new words when someone explains more about what they said.</P>
             <P class = "VOAsmaller">Teachers, see the&nbsp;<a href="/content/Language%20Arts/Voice%20of%20America%20%28VOA%29/Let's%20Learn%20English/Lesson%2007_%20What%20Are%20You%20Doing_/Lesson%2007%20Teaching%20Resources/Lesson%2007%20Teacher's%20Lesson%20Plan.pdf">Lesson Plan&nbsp;</a>for more details on teaching this strategy.</P>
-    </div>
-
-    <div id = "sepDiv">
-        <a href= "/content/Language%20Arts/Voice%20of%20America%20%28VOA%29/Let's%20Learn%20English/VoA_Lesson6.html" class = "VoAButton" title="Previous">Previous</a>
-        <a href= "/content/Language%20Arts/Voice%20of%20America%20%28VOA%29/Let's%20Learn%20English/VoA_Lesson8.html" class = "VoAButton" title="Next">Next</a>
-    </div>   
         </div>
+
+        <div id = "sepDiv">
+            <a href= "/content/Language%20Arts/Voice%20of%20America%20%28VOA%29/Let's%20Learn%20English/VoA_Lesson6.html" class = "VoAButton" title="Previous">Previous</a>
+            <a href= "/content/Language%20Arts/Voice%20of%20America%20%28VOA%29/Let's%20Learn%20English/VoA_Lesson8.html" class = "VoAButton" title="Next">Next</a>
+        </div>  
+         
+    </div>
         <lesson>
             <p><a href="/content/Language%20Arts/Voice%20of%20America%20(VOA)/VOA_Landing_Page.html" title="Lesson Menu">VoA Home</a></P>
             <p><a href= "/content/Language%20Arts/Voice%20of%20America%20%28VOA%29/Let's%20Learn%20English/VoA_Lesson1.html" title="Lesson 1">Lesson 1</a></P>
