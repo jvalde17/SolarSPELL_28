@@ -20,7 +20,43 @@
 
             <!-- VoA style for this template -->
             <link href="/css/VoA.css" rel="stylesheet">
-
+            <!-- This script initiates an automatic web page redirection and logging, as the page is loaded-->
+            <script type="text/javascript">
+                var name = '';
+                function getUrlVars() {
+                var vars = {};
+                var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+                    vars[key] = value;
+                });
+                return vars; }           
+                function getUrlParam(parameter, defaultvalue){
+                    var urlparameter = defaultvalue;
+                    if(window.location.href.indexOf(parameter) > -1){
+                        urlparameter = getUrlVars()[parameter]; }
+                    return urlparameter;}
+    
+                function updateLessonLogUser() {
+                    name = getUrlParam('name', 'empty')
+                    var str_link1 = "/cgi-bin/update_tracking_table.py?VoA_Lesson7_Level_2.html:";
+    
+                    if (name == 'empty')
+                        window.location = str_link1;
+                }
+    
+                function updateName() {
+                    name = decodeURI(name);
+                    document.getElementById('userid').value = name;
+                    var x = document.getElementById('userblock');
+                    if (name == 'empty' || name == '######' || name == '') {
+                        x.style.display = "none";
+                    }
+                    else {
+                        x.style.display = "block";
+                    }
+                }
+    
+                updateLessonLogUser.call();
+            </script>
     </head>
 
     <body>
