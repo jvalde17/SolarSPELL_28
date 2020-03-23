@@ -20,10 +20,46 @@
 
             <!-- VoA style for this template -->
             <link href="/css/VoA.css" rel="stylesheet">
+            <!-- This script initiates an automatic web page redirection and logging, as the page is loaded-->
+            <script type="text/javascript">
+                var name = '';
+                function getUrlVars() {
+                var vars = {};
+                var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+                    vars[key] = value;
+                });
+                return vars; }           
+                function getUrlParam(parameter, defaultvalue){
+                    var urlparameter = defaultvalue;
+                    if(window.location.href.indexOf(parameter) > -1){
+                        urlparameter = getUrlVars()[parameter]; }
+                    return urlparameter;}
 
+                function updateLessonLogUser() {
+                    name = getUrlParam('name', 'empty')
+                    var str_link1 = "/cgi-bin/update_tracking_table.py?VoA_Lesson24_Level_2.html:";
+
+                    if (name == 'empty')
+                        window.location = str_link1;
+                }
+
+                function updateName() {
+                    name = decodeURI(name);
+                    document.getElementById('userid').value = name;
+                    var x = document.getElementById('userblock');
+                    if (name == 'empty' || name == '######' || name == '') {
+                        x.style.display = "none";
+                    }
+                    else {
+                        x.style.display = "block";
+                    }
+                }
+
+                updateLessonLogUser.call();
+            </script>
     </head>
 
-    <body>
+    <body onload="updateName()">
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -207,11 +243,20 @@
     <div id = "clearAll"></div>
 
     <div id = "sect">
+        <!-- Start of login name and logout btn -->
+        <div class ="logout" id="userblock">
+            <form method="post" action="/cgi-bin/logout.py">
+            <p><input type="text" name="userid" id="userid"></p>
+            <p class="submit"><input type="submit" name="voa_logout_btn" value="Logout"></p>
+            </form>
+        </div>
+
+
         <div id = "sepDiv">
         <h1 class = "VOAh1">
             Lesson 24: I Feel Super!
         </h1>
-    </div>
+        </div>
 
     <div class="VOAvideo">
         <video class = "VOAvidwrapper" controls>
