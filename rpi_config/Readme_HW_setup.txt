@@ -31,3 +31,34 @@ sudo cp -a /etc/dhcpcd.conf /etc/dhcpcd.conf.orig
 append these lines to the end of /etc/dhcpcd.conf:
 interface wlan0
     static ip_address=10.10.10.10/24
+
+sudo cp -a /etc/network/interfaces /etc/network/interfaces.orig
+sudo nano /etc/network/interfaces and comment out the line containing wpa-conf in the wlan0 section, so that it looks like this:
+allow-hotplug wlan0
+iface wlan0 inet manual
+#    wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+
+sudo nano /etc/hostapd/hostapd.conf:
+# SPELL WiFi network configuration
+
+# Use the Raspberry Pi 3's built-in WiFi device
+interface=wlan0
+
+# Use the nl80211 driver with the brcmfmac driver
+driver=nl80211
+
+# This is the name of the network
+ssid=SPELL
+
+# Use mode 802.11g for backwards compatibility with older devices
+hw_mode=g
+
+# Use channel 6
+channel=6
+
+# Disable WMM (QoS via traffic prioritization, which we don't need)
+wmm_enabled=0
+
+# Use open authentication (no password needed)
+auth_algs=1
+    
