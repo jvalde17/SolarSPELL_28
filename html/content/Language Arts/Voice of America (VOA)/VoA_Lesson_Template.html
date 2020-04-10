@@ -1,13 +1,62 @@
+<!--
+    --------------------------
+    VoA Lesson Template
+    Last Update: April 5, 2020
+    --------------------------
+
+    -----------------------
+    TEMPLATE USAGE SUMMARY:
+    -----------------------
+
+    This lesson template is set up to be as flexible as possible. In order to achieve this,
+    the template is split into sections that will all be listed below. These section headers
+    are all located at their relative locations within the template and can be searched by
+    name to jump to the sections. Sections that are optional are listed as such, and will
+    have all of their contents commented out by defult - it is recommended that the user 
+    update the template to contain only their desired sections and save a copy before 
+    applying it to lessons for ease of use.
+
+    --------------
+    SECTIONS LIST: 
+    --------------
+
+    1. Lesson Number
+    2. Meta Lesson Number
+    3. Script Initiation (OPTIONAL - all script sections must be enabled together)
+    4. Script Body Header (OPTIONAL - all script sections must be enabled together)
+    5. Script Name/Logout Button (OPTIONAL - all script sections must be enabled together)
+    6. Lesson title
+    7. Lesson Objectives
+    8. Lesson Summary
+    9. Main Video
+    10. Speaking Practice Video
+    11. Pronunciation Practice Video
+    12. Conversation Script
+    13. Conversation Audio
+    14. Lesson Resources
+    15. New Words
+    16. Learning Strategy
+    17. Next/Previous Buttons
+    18. Sidebar Entries
+-->
 <!DOCTYPE html>
 <html>
     <head>
+            <!--
+                Section 1 - Lesson Number
+                Replace ## with lesson number
+            -->
             <title>VoA Lesson ##</title>
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes"/>
             <!--[if lt IE 9]>
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"> </script>   
             <![endif]-->
-            <meta name="Lesson ## Level 2 VoA" content="Lesson ## Level 2 VoA Learning English" />
+            <!--
+                Section 2 - Meta Lesson Number
+                Replace ## with lesson number
+            -->
+            <meta name="Lesson ## VoA" content="Lesson ## VoA Learning English" />
 
             <!-- Bootstrap core CSS -->
             <link href="/css/bootstrap.css" rel="stylesheet">
@@ -21,8 +70,56 @@
             <!-- VoA style for this template -->
             <link href="/css/VoA.css" rel="stylesheet">
 
+            <!--
+                Section 3 - Script Initiation
+                Uncomment following section and replace ##.html with lesson file name
+            -->
+
+            <!-- This script initiates an automatic web page redirection and logging, as the page is loaded-->
+            <!--
+            <script type="text/javascript">
+                var name = '';
+                function getUrlVars() {
+                var vars = {};
+                var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+                    vars[key] = value;
+                });
+                return vars; }           
+                function getUrlParam(parameter, defaultvalue){
+                    var urlparameter = defaultvalue;
+                    if(window.location.href.indexOf(parameter) > -1){
+                        urlparameter = getUrlVars()[parameter]; }
+                    return urlparameter;}
+    
+                function updateLessonLogUser() {
+                    name = getUrlParam('name', 'empty')
+                    var str_link1 = "/cgi-bin/update_tracking_table.py?##.html:";
+                    
+                    if (name == 'empty')
+                        window.location = str_link1;
+                }
+    
+                function updateName() {
+                    name = decodeURI(name);
+                    document.getElementById('userid').value = name;
+                    var x = document.getElementById('userblock');
+                    if (name == 'empty' || name == '######' || name == '') {
+                        x.style.display = "none";
+                    }
+                    else {
+                        x.style.display = "block";
+                    }
+                }
+    
+                updateLessonLogUser.call();
+            </script>
+            -->
     </head>
 
+    <!--
+        Section 4 - Script Body Header
+        Replace the <body> tag below with <body onload="updateName()">
+    -->
     <body>
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
@@ -207,101 +304,191 @@
     <div id = "clearAll"></div>
 
     <div id = "sect">
+        <!--
+            Section 5 - Script Name/Logout Button
+            Uncomment following section
+        -->
+        <!-- Start of login name and logout btn -->
+        <!--
+        <div id = "sepDiv">
+            <div class ="logout" id="userblock">
+                <form method="post" action="/cgi-bin/logout.py">
+                <p><input type="text" name="userid" id="userid"></p>
+                <p class="submit"><input type="submit" name="voa_logout_btn" value="Logout"></p>
+                </form>
+            </div>
+        </div>
+        -->
         <div id = "sepDiv">
         <h1 class = "VOAh1">
-            Lesson ##: ##TITLE##
+            <!--
+                Section 6 - Lesson Title
+                Replace ##Number## with lesson number and replace ##Title## with lesson title
+            -->
+            Lesson ##Number##: ##Title##
         </h1>
     </div>
 
-    <div class="VOAvideo">
-        <video class = "VOAvidwrapper" controls>
-            <source src="##" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+    <!--
+        Section 7 - Lesson Objectives
+        Remove the following section if there are no objectives for the lesson, otherwise use
+        the template objective styles to add the lesson objectives
+    -->
+    <div id = "sepDiv">
+        <P class = "VOAp">
+            <strong>Objectives</strong>
+        </p>
+        <ul class = "VOAul">
+            <p class = "VOAobjective">##.</p> <!--Template for objective style 1-->
+            <p class = "VOAobjective">Students learn to use the strategy, <em>##</em>, ##.</p> <!--Template for objective style 2-->
+        </ul>
     </div>
 
-    <!--Remove this div if no summary content-->
+    <!--
+        Section 8 - Lesson Summary
+        Remove the following section if there is no summary for the lesson, otherwise
+        replace ## with the summary content for the lesson
+    -->
     <div id = "sumDiv">
         <p class = "VOAp">Summary</p> 
-        <P class = "VOAsmaller">##CONTENT##</P>    
-    </div>
-
-    <div id = "sumDiv">
-        <P class = "VOAp">Conversation</p>
-        <P class = "VOAp">
-            <strong>Review</strong> the following audio:
-        </p>   
-        <P class = "VOAp">
-            <audio controls>
-                <source src="##.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-        </p>
-        <P class = "VOAsmaller"><strong>##Name##: </strong>##Text##</P>
-        <P class = "VOAsmaller"><strong>##Name##: </strong>##Text##</P>
-        <P class = "VOAsmaller"><strong>##Name##: </strong>##Text##</P>
-        <P class = "VOAsmaller"><strong>##Name##: </strong>##Text##</P>
-        <P class = "VOAsmaller"><strong>##Name##: </strong>##Text##</P>
-   </div>
-
-    <div id = "sumDiv">
-        <P class = "VOAp">
-            New Words
-        </p>
-        <P class = "VOAsmaller" id = "keyPts"><strong>##word##</strong>&nbsp;-<em>&nbsp;##part of speech##.</em>&nbsp;##definition##.&nbsp;</p>
-        <P class = "VOAsmaller" id = "keyPts"><strong>##word##</strong>&nbsp;-<em>&nbsp;##part of speech##.</em>&nbsp;##definition##.&nbsp;</p>
-        <P class = "VOAsmaller" id = "keyPts"><strong>##word##</strong>&nbsp;-<em>&nbsp;##part of speech##.</em>&nbsp;##definition##.&nbsp;</p>
-    </div>
-
-    <div id = "sumDiv">
-        <P class = "VOAp">Learning Strategy</p>
-        <P class = "VOAsmaller">##content##</p>
-    </div>
-
-     <div id = "sumDiv">
-        <P class = "VOAp">For Teachers</p>
-        <P class = "VOAsmaller"><strong>Grammar focus: </strong>##</p>
-        <p class = "VOAsmaller"><strong>Topics: </strong>##</p>
-        <p class = "VOAsmaller"><strong>Learning Strategy: </strong>##</p>
+        <P class = "VOAsmaller">##</P>    
     </div>
 
     <div id = "sepDiv">
-        <a href= "##" class = "VoAButton" title="Previous">Previous</a>
-        <a href= "##" class = "VoAButton" title="Next">Next</a>
+        <P class = "VOAp">
+            <strong>Review</strong> the following videos:
+        </p>
+        
+        <!--
+            Section 9 - Main Video
+            Replace ## with the relative location of the video, starting from /content/
+        -->
+        <div class="VOAvideo">
+            <video class = "VOAvidwrapper" controls>
+                <source src="##" type="video/mp4">
+                    Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!--
+            Section 10 - Speaking Practice Video
+            Replace ## with the relative location of the speaking practice video, starting from /content/
+            Remove this section if there is no speaking practice video
+        -->
+        <p class = "VOAp">Speaking Practice</p>
+        <div class="VOAvideo">
+            <video class = "VOAvidwrapper" controls>
+                <source src="##" type="video/mp4">
+                    Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!--
+            Section 11 - Pronunciation Practice Video
+            Replace ## with the relative location of the pronuncuation practice video, starting from /content/
+            Remove this section if there is no pronuncuation practice video
+        -->
+        <p class = "VOAp">Pronunciation Practice</p>
+        <div class="VOAvideo">
+            <video class = "VOAvidwrapper" controls>
+                <source src="##" type="video/mp4">
+                    Your browser does not support the video tag.
+            </video>
+        </div>
+
+    </div>
+
+    <div id = "sepDiv">
+            <!--
+                Section 12 - Conversation Script 
+                Copy the template line and replace ##Name## with the speaker's name, and ##Text## with
+                the conversation text for each line
+            -->
+            <P class = "VOAp">Conversation</p>
+                <P class = "VOAsmaller"><strong>##Name##: </strong>##Text##.</P> <!--Template-->
+            
+            <P class = "VOAp">
+                <strong>Review</strong> the following audio:
+            </p>
+
+            <!--
+                Section 13 - Conversation Audio
+                Replace ## with the relative location of the conversation audio, starting at /content/
+            -->
+            <P class = "VOAp">
+                    <audio controls>
+                            <source src="##.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                    </audio>
+            </p>
+            
+        </div>
+
+ 
+    <div id = "sepDiv">
+        <P class = "VOAp">
+            <strong>Review</strong> the following resources:
+        </p>
+        <ul class = "VOAul">
+            <!--
+                Section 14 - Lesson Resources
+                Replace each ##href## with the resource location, starting at /content/
+                Replace each ##Title of Resource## with the title of the respective resource
+                Put all resources in alphabetical order
+            -->
+            <li class = "VOAli"><a href="##href##">##Title of Resource##</a></li>
+            <li class = "VOAli"><a href="##href##">##Title of Resource##</a></li>
+            <li class = "VOAli"><a href="##href##">##Title of Resource##</a></li>
+            <li class = "VOAli"><a href="##href##">##Title of Resource##</a></li>
+        </ul>
+    </div>
+
+    <div id = "sepDiv">
+        <P class = "VOAp">
+            New Words
+        </p>
+        <!--
+            Section 15 - New Words
+            Copy the new word template and replace each ##word##, ##part of speech## and ##definition##
+            with their respective source data
+        -->
+        <P class = "VOAsmaller" id = "keyPts"><strong>##word##</strong>&nbsp;-<em>&nbsp;##part of speech##.</em>&nbsp;##definition##.&nbsp;</p> <!--New word template-->
+    </div>
+
+    <div id = "sepDiv">
+        <!--
+            Section 16 - Learning Strategy
+            Copy the template for each paragraph in the lesson strategy
+            Replace ##content## with a paragraph of the lesson strategy
+        -->
+        <P class = "VOAp">Learning Strategy</p>
+            <P class = "VOAsmaller"><strong>##content##</p> <!--Strategy template-->
+    </div>
+
+    <div id = "sepDiv">
+        <!--
+            Section 17 - Next/Previous Buttons
+            Replace ##prev## with the relative location of the previous lesson, starting at /content/
+            Replace ##next## with the relative location of the next lesson, starting at /content/
+            Remove next or previous buttons if there is no next/previous for the current lesson, respectively
+        -->
+        <a href= "##prev##" class = "VoAButton" title="Previous">Previous</a>
+        <a href= "##next##" class = "VoAButton" title="Next">Next</a>
     </div>   
         </div>
         <lesson>
             <p><a href="/content/Language%20Arts/Voice%20of%20America%20(VOA)/VOA_Landing_Page.html" title="Lesson Menu">VoA Home</a></P>
-            <p><a href= "/content/Language%20Arts/Voice%20of%20America%20%28VOA%29/Let's%20Learn%20English%202/VoA_Lesson1_Level_2.html" title="Lesson 1">Lesson 1</a></P>
-            <p><a href= "/content/Language%20Arts/Voice%20of%20America%20%28VOA%29/Let's%20Learn%20English%202/VoA_Lesson2_Level_2.html" title="Lesson 2">Lesson 2</a></P>
-            <p><a href= "/content/Language%20Arts/Voice%20of%20America%20%28VOA%29/Let's%20Learn%20English%202/VoA_Lesson3_Level_2.html" title="Lesson 3">Lesson 3</a></P>
-            <p><a href= "/content/Language%20Arts/Voice%20of%20America%20%28VOA%29/Let's%20Learn%20English%202/VoA_Lesson4_Level_2.html" title="Lesson 4">Lesson 4</a></P>
-            <p><a href= "/content/Language%20Arts/Voice%20of%20America%20%28VOA%29/Let's%20Learn%20English%202/VoA_Lesson5_Level_2.html" title="Lesson 5">Lesson 5</a></P>
-            <p><a href= "/content/Language%20Arts/Voice%20of%20America%20%28VOA%29/Let's%20Learn%20English%202/VoA_Lesson6_Level_2.html" title="Lesson 6">Lesson 6</a></P>
-            <p><a href= "/content/Language%20Arts/Voice%20of%20America%20%28VOA%29/Let's%20Learn%20English%202/VoA_Lesson7_Level_2.html" title="Lesson 7">Lesson 7</a></P>
-            <p><a href= "/content/Language%20Arts/Voice%20of%20America%20%28VOA%29/Let's%20Learn%20English%202/VoA_Lesson8_Level_2.html" title="Lesson 8">Lesson 8</a></P>
-            <p><a href= "/content/Language%20Arts/Voice%20of%20America%20%28VOA%29/Let's%20Learn%20English%202/VoA_Lesson9_Level_2.html" title="Lesson 9">Lesson 9</a></P>
-            <p><a href= "/content/Language%20Arts/Voice%20of%20America%20%28VOA%29/Let's%20Learn%20English%202/VoA_Lesson10_Level_2.html" title="Lesson 10">Lesson 10</a></P>
-            <p><a href= "/content/Language%20Arts/Voice%20of%20America%20%28VOA%29/Let's%20Learn%20English%202/VoA_Lesson11_Level_2.html" title="Lesson 11">Lesson 11</a></P>
-            <p><a href= "/content/Language%20Arts/Voice%20of%20America%20%28VOA%29/Let's%20Learn%20English%202/VoA_Lesson12_Level_2.html" title="Lesson 12">Lesson 12</a></P>
-            <p><a href= "/content/Language%20Arts/Voice%20of%20America%20%28VOA%29/Let's%20Learn%20English%202/VoA_Lesson13_Level_2.html" title="Lesson 13">Lesson 13</a></P>
-            <p><a href= "/content/Language%20Arts/Voice%20of%20America%20%28VOA%29/Let's%20Learn%20English%202/VoA_Lesson14_Level_2.html" title="Lesson 14">Lesson 14</a></P>
-            <p><a href= "/content/Language%20Arts/Voice%20of%20America%20%28VOA%29/Let's%20Learn%20English%202/VoA_Lesson15_Level_2.html" title="Lesson 15">Lesson 15</a></P>
-            <p><a href= "/content/Language%20Arts/Voice%20of%20America%20%28VOA%29/Let's%20Learn%20English%202/VoA_Lesson16_Level_2.html" title="Lesson 16">Lesson 16</a></P>
-            <p><a href= "/content/Language%20Arts/Voice%20of%20America%20%28VOA%29/Let's%20Learn%20English%202/VoA_Lesson17_Level_2.html" title="Lesson 17">Lesson 17</a></P>
-            <p><a href= "/content/Language%20Arts/Voice%20of%20America%20%28VOA%29/Let's%20Learn%20English%202/VoA_Lesson18_Level_2.html" title="Lesson 18">Lesson 18</a></P>
-            <p><a href= "/content/Language%20Arts/Voice%20of%20America%20%28VOA%29/Let's%20Learn%20English%202/VoA_Lesson19_Level_2.html" title="Lesson 19">Lesson 19</a></P>
-            <p><a href= "/content/Language%20Arts/Voice%20of%20America%20%28VOA%29/Let's%20Learn%20English%202/VoA_Lesson20_Level_2.html" title="Lesson 20">Lesson 20</a></P>
-            <p><a href= "/content/Language%20Arts/Voice%20of%20America%20%28VOA%29/Let's%20Learn%20English%202/VoA_Lesson21_Level_2.html" title="Lesson 21">Lesson 21</a></P>
-            <p><a href= "/content/Language%20Arts/Voice%20of%20America%20%28VOA%29/Let's%20Learn%20English%202/VoA_Lesson22_Level_2.html" title="Lesson 22">Lesson 22</a></P>
-            <p><a href= "/content/Language%20Arts/Voice%20of%20America%20%28VOA%29/Let's%20Learn%20English%202/VoA_Lesson23_Level_2.html" title="Lesson 23">Lesson 23</a></P>
-            <p><a href= "/content/Language%20Arts/Voice%20of%20America%20%28VOA%29/Let's%20Learn%20English%202/VoA_Lesson24_Level_2.html" title="Lesson 24">Lesson 24</a></P>
-            <p><a href= "/content/Language%20Arts/Voice%20of%20America%20%28VOA%29/Let's%20Learn%20English%202/VoA_Lesson25_Level_2.html" title="Lesson 25">Lesson 25</a></P>
-            <p><a href= "/content/Language%20Arts/Voice%20of%20America%20%28VOA%29/Let's%20Learn%20English%202/VoA_Lesson26_Level_2.html" title="Lesson 26">Lesson 26</a></P>
-            <p><a href= "/content/Language%20Arts/Voice%20of%20America%20%28VOA%29/Let's%20Learn%20English%202/VoA_Lesson27_Level_2.html" title="Lesson 27">Lesson 27</a></P>
-            <p><a href= "/content/Language%20Arts/Voice%20of%20America%20%28VOA%29/Let's%20Learn%20English%202/VoA_Lesson28_Level_2.html" title="Lesson 28">Lesson 28</a></P>
-            <p><a href= "/content/Language%20Arts/Voice%20of%20America%20%28VOA%29/Let's%20Learn%20English%202/VoA_Lesson29_Level_2.html" title="Lesson 29">Lesson 29</a></P>
-            <p><a href= "/content/Language%20Arts/Voice%20of%20America%20%28VOA%29/Let's%20Learn%20English%202/VoA_Lesson30_Level_2.html" title="Lesson 30">Lesson 30</a></P>
+            <!--
+                Section 18 - Sidebar Entries
+                Copy the sidebar template for each lesson that will be on the sidebar
+                Replace ##href## with the relative location of the lesson, starting at /content/
+                Replace ##title## with a title for the link (display name will usually suffice)
+                Replace ##display## with the desired display name for the link on the sidebar
+                
+                Recommended: Do this once for the template and copy the entire sidebar section to each lesson
+                in the "set"
+            -->
+            <p><a href= "##href##" title="##title##">##display##</a></P>
 
     </lesson>
        
