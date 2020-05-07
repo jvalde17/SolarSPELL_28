@@ -1,5 +1,5 @@
 # SolarSPELL_28
-ASU SER-401 Team 28
+ASU Team 28
 
 Fall 2019 - Spring 2020
 
@@ -10,5 +10,5 @@ Catherine Khongsaly,
 Christopher Risser,
 Tony Conrad
 
-Development branch created 10-10-2019
+Dev branch created 10-10-2019
  
